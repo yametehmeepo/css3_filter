@@ -4,10 +4,8 @@ var rangeValues = [10, 0.5, 2]
 $(function(){
 	var img = $('#left img')[0];
 	$('#left img').attr('onload', function(){
-		alert('图片加载完')
 		$('.controller span').click(function(){
 			var initnumber = $(this).data('initnumber');
-			//console.log(initnumber)
 			var target = $(this).data('target');
 			$('.range input').css('display', 'none')
 			$('.controller span').removeClass('on')
@@ -16,7 +14,6 @@ $(function(){
 			$('#right').empty()
 			$('#right').append($img)
 			$('#right img').css('filter', $(this).data('filter'))
-			//console.log(($('#right img').css('filter')))
 			$(target).val(initnumber)
 			$(target).css('display', 'block')
 		})
