@@ -2,7 +2,9 @@ var rangeValues = [10, 0.5, 2]
 
 
 $(function(){
+	var img = $('#left img')[0];
 	$('#left img').attr('onload', function(){
+		alert('图片加载完')
 		$('.controller span').click(function(){
 			var initnumber = $(this).data('initnumber');
 			//console.log(initnumber)
